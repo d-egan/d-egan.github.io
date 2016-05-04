@@ -26,28 +26,48 @@
         <header id="header">
             <iframe seamless="seamless" src="p5-zip/headerThang/index.html" width="630px" height="630px" seamless scrollable='no' ></iframe>
             <h1 id="textFade">Declan Egan</h1>
-            <!--<p>somethin</p>-->
-            <nav>
+            <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Project name</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link disabled" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                </div><!--/.nav-collapse -->
+              </div>
             </nav>
+
         </header>
+        <a name="profile"></a>
         <div id="mainContent">
             <div class="section">
-                <div class="container notSkills">
+               <div class="container container-adjust notSkills">
                     <h1>Profile</h1>
                     <div class ="row">
                         <div class="col-md-4">
                             <h4>About Me</h4>
-                            <p>Blah blah blah alsdflasdflsdafsdaf  sadfsadf</p>
+                            <p>I'm a 20-something-ish blah lorem ipsum needs be replaced ----- with actual content, something something </p>
                         </div>
                         <div class="col-md-4">
-                        <img src="" >
+                            <img src="" >
                         </div>
                         <div class="col-md-4">
-                            <!--<h4>Details</h4>
-                            <h3>Name</h3>
-                            <p>Declan Egan</p>
-                            <h3>Location</h3>
-                            <p>Ireland</p>-->
                             <h4>Details</h4>
                             <p>
                             <strong>Name:</strong><br>
@@ -60,9 +80,11 @@
                     </div>
                 </div>
             </div>
+            <a name="skills"></a>
             <div class="section" id="skills">
-                <div class="container">
+                <div class="container container-adjust">
                     <h1>Skills</h1>
+                    <hr>
                     <div class ="row">
                         <div class="col-md-6">
                             <h2>Programming</h2>
@@ -272,16 +294,23 @@
                     </div>
                 </div>
             </div>
+            <a name="contact"></a>
             <div class="section">
-                <div class="container notSkills">
+                <div class="container container-adjust notSkills">
                     <h1>Contact</h1>
-                    <div class ="row">
-                        <div class="col-md-6"><h4>Contact</h4></div>
-                        <div class="col-md-6"><h4>Other Links</h4></div>
+                    
+                    <div id="newLinks">
+                        <a href="https://github.com/d-egan"><span class="icon-git" target ="_blank"></span></a>
+                        <a href="    https://ie.linkedin.com/in/declan-egan-3b01aa74"><span class="icon-linkedin" target ="_blank"></span></a>
+                        <a href="https://twitter.com/declanegan_"><span class="icon-twitter" target ="_blank"></span></a>
                     </div>
+                 
+            
                 </div>
             </div>
         </div> 
+        <script src="js/jquery-2.2.3.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script>
             //$('textFade').addClass('black');
             var d = document.getElementById("textFade");
