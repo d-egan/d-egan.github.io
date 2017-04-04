@@ -24,23 +24,33 @@
         path.moveTo(start);
 
         path.lineTo(start + [ 100, -50]);
+
+        var path2 = new Path.Circle({
+            center: view.center,
+            radius: 30,
+            strokeColor: 'black'
+        });
+
+        function onResize(event) {
+            path2.position = view.center;
+        }
         </script>
 
     </head>
     <body>
         <canvas id="myCanvas" resize="true"></canvas>
-        <div>
-            <header>
-                <h1>Declan Egan</h1>
-                <!--<a href="projects.html">PROJECTS</a>-->
-                <a href="tests.html">TESTS</a>
-            </header>
-            <div id=bio>
-            </div>
-            
-            
-            <div>
+        
+        <nav>
+            <h1>Declan Egan</h1>
+            <!--<a href="projects.html">PROJECTS</a>-->
+            <a href="tests.html">TESTS</a>
+        </nav>
+        <div id=bio>
         </div>
+            
+            
+        <div>
+        
         
         
     </body>
