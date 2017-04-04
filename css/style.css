@@ -1,0 +1,30 @@
+#projectContainer {
+
+	display: flex;
+	flex-flow: row wrap;
+	flex-wrap: wrap;
+	border-color: red;
+	flex-direction: row;
+	background-color: green;
+	
+}
+
+.projectCol {
+	display: flex;
+	flex-direction: column;	
+	background-color: yellow;
+
+}
+
+.projectSquares {
+
+	border: solid;
+	border-width: 2px;
+	border-color: red;
+	background-color: blue;
+	
+}
+
+.projectSquares::before {
+	content: "Work in progress";
+}
