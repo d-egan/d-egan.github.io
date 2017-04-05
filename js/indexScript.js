@@ -17,7 +17,7 @@ var rect = new Path.Rectangle({
 
   
 var topInc = -1;
-var bottomInc = 2;
+var bottomInc = 1;
 
 function onFrame(event){
   console.log(rect.bounds.top);
