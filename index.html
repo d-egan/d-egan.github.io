@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <!-- <link rel ="icon" href=""> -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel ="icon" href=""> -->
 
-        <title>Declan Egan</title>
+    <title>Declan Egan</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-        <!-- My css -->
-        <link href="css/style.css" rel="stylesheet">
+    <!-- My css -->
+    <link href="css/style.css" rel="stylesheet">
 
-        <script type="text/javascript" src="js/paper-full.js"></script>
+    <script type="text/javascript" src="js/paper-full.js"></script>
 
-        <script type="text/paperscript" canvas="myCanvas">
-        var path = new Path();
+    <script type="text/paperscript" canvas="myCanvas">
+    var path = new Path();
 
-        path.strokeColor = "black";
-         var start = new Point(100, 100);
+    path.strokeColor = "black";
+     var start = new Point(100, 100);
 
-        path.moveTo(start);
+    path.moveTo(start);
 
-        path.lineTo(start + [ 100, -50]);
+    path.lineTo(start + [ 100, -50]);
 
-        var path2 = new Path.Circle({
-            center: view.center,
-            radius: 30,
-            strokeColor: 'black'
-        });
+    var path2 = new Path.Circle({
+        center: view.center,
+        radius: 30,
+        strokeColor: 'black'
+    });
 
-        function onResize(event) {
-            path2.position = view.center;
-        }
-        </script>
+    function onResize(event) {
+        path2.position = view.center;
+    }
+    </script>
 
-    </head>
-    <body>
-        <canvas id="myCanvas" resize="true"></canvas>
-        
-        <nav>
-            <h1>Declan Egan</h1>
-            <!--<a href="projects.html">PROJECTS</a>-->
-            <a href="tests.html">TESTS</a>
-        </nav>
-        <div id=bio>
-        </div>
-            
-            
-        <div>
+  </head>
+  <body>
+    <canvas id="myCanvas" resize="true"></canvas>
+    
+    <nav>
+      <h1>Declan Egan</h1>
+      <!--<a href="projects.html">PROJECTS</a>-->
+      <a href="tests.html">TESTS</a>
+    </nav>(eve)
+    <div id=bio>
+    </div>
         
         
-        
-    </body>
+    <div>
+      
+      
+      
+  </body>
 
 </html>
