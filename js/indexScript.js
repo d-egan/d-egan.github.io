@@ -1,38 +1,59 @@
-var path = new Path();
 
-path.strokeColor = "black";
-var start = new Point(100, 100);
+var numBoxes = 10;
+var boxes = Array(numBoxes);
 
-path.moveTo(start);
+for (var i = 0; i < numBoxes; i++){
+    var colour;
+    if (Math.floor(Math.random()*2)){
+        colour = "black";
+    } else {
+        colour = "white";
+    }
+    boxes[i] = new Path.Rectangle({
+        //point: [20, 20],
+        size: [Math.random()*400, Math.random()*400],
+        //size: new Size(200,200) * Size.random,
+        center: view.center,
+        //strokeColor: colour,
+        fillColor: colour
+    });
+    
+    boxes[i].topInc = ((Math.floor(Math.random()*2)*4)-2.0);
+    boxes[i].leftInc = ((Math.floor(Math.random()*2)*4)-2.0);
+    
+    boxes[i].what = function(){
+        console.log("he");
+    }
+    boxes[i].update = function() {
+        this.bounds.top += this.topInc;
+        this.bounds.bottom -= this.topInc;
+        this.bounds.left += this.leftInc;
+        this.bounds.right -= this.leftInc;
+   
+        if((this.bounds.top <= 0 && this.topInc < 0) || (this.bounds.top >= view.center.y-1 && this.topInc > 0)){
+            this.topInc *= -1;
+        }
+   /*
+   if((rect.bounds.bottom <= view.center.y+1 && bottomInc < 0) || (rect.bounds.bottom >= view.size.height && bottomInc > 0)){
+       bottomInc *= -1;
+   }*/
+        if((this.bounds.left <= 0 && this.leftInc < 0) || (this.bounds.left >= view.center.x-1 && this.leftInc > 0)){
+            this.leftInc *= -1;
+        }
+    }
+}
 
-path.lineTo(start + [ 100, -50]);
-
-var rect = new Path.Rectangle({
-//point: [20, 20],
-	size: [Math.random()*200, Math.random()*200],
-	center: view.center,
-	strokeColor: "black",
-	fillColor: "black"
-});
-
-  
-var topInc = -1;
-var bottomInc = 1;
-
+var heightScale = 1;
+var widthScale = 1;
 function onFrame(event){
-  console.log(rect.bounds.top);
-  console.log(rect.bounds.bottom);
-  rect.bounds.top += topInc;
-  rect.bounds.bottom += bottomInc;
-
-  if(rect.bounds.top <= 0 || rect.bounds.top >= view.center.y){
-     topInc *= -1;
-  }
-  if(rect.bounds.bottom <= view.center.y || rect.bounds.bottom >= view.size.height){
-     bottomInc *= -1;
-  }
+ 
+    for (var i = 0; i < boxes.length; i++) {
+        boxes[i].update();
+    }
 }
 
 function onResize(){
-  rect.center = view.center;
-  } 
+    for (var i = 0; i < boxes.length; i++) {
+        boxes[i].center = view.center;
+    }
+}
