@@ -29,22 +29,17 @@ for (var i = 0; i < numBoxes; i++){
         this.bounds.bottom -= this.topInc;
         this.bounds.left += this.leftInc;
         this.bounds.right -= this.leftInc;
-   
+
         if((this.bounds.top <= 0 && this.topInc < 0) || (this.bounds.top >= view.center.y-1 && this.topInc > 0)){
             this.topInc *= -1;
         }
-   /*
-   if((rect.bounds.bottom <= view.center.y+1 && bottomInc < 0) || (rect.bounds.bottom >= view.size.height && bottomInc > 0)){
-       bottomInc *= -1;
-   }*/
+
         if((this.bounds.left <= 0 && this.leftInc < 0) || (this.bounds.left >= view.center.x-1 && this.leftInc > 0)){
             this.leftInc *= -1;
         }
     }
 }
 
-var heightScale = 1;
-var widthScale = 1;
 function onFrame(event){
  
     for (var i = 0; i < boxes.length; i++) {

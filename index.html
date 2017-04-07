@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -17,47 +17,40 @@
     <script type="text/javascript" src="js/paper-full.js"></script>
 
     <script type="text/paperscript" canvas="myCanvas">
-    var path = new Path();
+        var path = new Path();
 
-    path.strokeColor = "black";
-     var start = new Point(100, 100);
+        path.strokeColor = "black";
+        var start = new Point(100, 100);
 
-    path.moveTo(start);
+        path.moveTo(start);
 
-    path.lineTo(start + [ 100, -50]);
+        path.lineTo(start + [ 100, -50]);
 
-    var path2 = new Path.Circle({
-        center: view.center,
-        radius: 30,
-        strokeColor: 'black'
-    });
+        var path2 = new Path.Circle({
+            center: view.center,
+            radius: 30,
+            strokeColor: 'black'
+        });
 
-    function onResize(event) {
-        path2.position = view.center;
-    }
+        function onResize(event) {
+            path2.position = view.center;
+        }
     </script>
 
-  </head>
-  <body>
-    <canvas id="myCanvas" resize="true"></canvas>
+</head>
+    <body>
+        <canvas id="myCanvas" resize="true"></canvas>
     
-    <nav>
-      <h1>Declan Egan</h1>
-      <ul>
-    <li><a href="index.html">HOME</a></li>
-        <li><a href="test.html">TESTS</a></li>
-      </ul>
-      <!--<a href="projects.html">PROJECTS</a>-->
-      <a href="tests.html">TESTS</a>
-    </nav>
-    <div id=bio>
-    </div>
-        
-        
-    <div>
-      
-      
-      
-  </body>
+        <nav>
+            <h1>Declan Egan</h1>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="test.html">TESTS</a></li>
+            </ul>
+            <!--<a href="projects.html">PROJECTS</a>-->
+        </nav>
+        <div id=bio>
+        </div>
+    </body>
 
 </html>
