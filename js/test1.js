@@ -55,7 +55,7 @@ function onResize(){
 function onKeyDown(event){
     if(event.key == 'up'){
         
-        if(boxes[0] < 1.0) {
+        if(boxes[0].opacity < 1.0) {
             for (var i = 0; i < boxes.length; i++) {
                 boxes[i].opacity += 0.01;
             }
@@ -63,7 +63,7 @@ function onKeyDown(event){
     }
 
     if(event.key == 'down'){
-        if(boxes[0] > 0.0) {
+        if(boxes[0].opacity > 0.0) {
             for (var i = 0; i < boxes.length; i++) {
                 boxes[i].opacity -= 0.01;
             }
