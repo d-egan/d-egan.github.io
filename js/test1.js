@@ -43,7 +43,7 @@ for (var i = 0; i < numBoxes; i++) {
 }
 
 var text = new PointText({
-    position: [50, view.viewSize.height -40],
+    position: [100, view.viewSize.height -40],
     fillColor: 'black',
     justification: 'center',
     fontSize: 20
@@ -82,7 +82,7 @@ function onKeyDown(event) {
     }
 
    if(event.key == 'right') {
-        if(blendIndex < blendMode.length) {
+        if(blendIndex < blendModes.length) {
             blendIndex++;
             for (var i = 0; i < boxes.length; i++) {
                 boxes[i].blendMode = blendModes[blendIndex];
