@@ -4,6 +4,13 @@ var boxes = Array(numBoxes);
 var blendModes = ['normal', 'multiply', 'screen', 'overlay', 'soft-light', 'hard- light', 'color-dodge', 'color-burn', 'darken', 'lighten', 'difference', 'exclusion', 'hue', 'saturation', 'luminosity', 'color', 'add', 'subtract', 'average', 'pin-light', 'negation', 'source- over', 'source-in', 'source-out', 'source-atop', 'destination-over', 'destination-in', 'destination-out', 'destination-atop', 'lighter', 'darker', 'copy', 'xor'];
 var blendIndex = 0;
 
+var text = new PointText({
+    position: [20, view.height-40],
+    fillColor: 'black',
+    justification: 'center',
+    fontSize: 20
+});
+
 for (var i = 0; i < numBoxes; i++) {
     var colour;
     if (Math.floor(Math.random()*2)) {
@@ -53,7 +60,10 @@ function onResize() {
         boxes[i].center = view.center;
     }
 }
-
+/*
+ *  TODO: Create function that handles cycling through boxes?
+ *
+ */
 function onKeyDown(event) {
     if(event.key == 'up') {
         if(boxes[0].opacity < 1.0) {
@@ -88,6 +98,7 @@ function onKeyDown(event) {
             }
         }
     }
- 
+    
+    text.content = "OPACITY: " + boxes[0].opacity + " BLENDMODE: " + blendMode[blendIndex];
 
 }
