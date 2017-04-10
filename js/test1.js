@@ -43,7 +43,7 @@ for (var i = 0; i < numBoxes; i++) {
 }
 
 var text = new PointText({
-    position: [50, view.viewSize-40],
+    position: [50, view.viewSize.height -40],
     fillColor: 'black',
     justification: 'center',
     fontSize: 20
