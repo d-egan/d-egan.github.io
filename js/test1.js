@@ -4,13 +4,6 @@ var boxes = Array(numBoxes);
 var blendModes = ['normal', 'multiply', 'screen', 'overlay', 'soft-light', 'hard- light', 'color-dodge', 'color-burn', 'darken', 'lighten', 'difference', 'exclusion', 'hue', 'saturation', 'luminosity', 'color', 'add', 'subtract', 'average', 'pin-light', 'negation', 'source- over', 'source-in', 'source-out', 'source-atop', 'destination-over', 'destination-in', 'destination-out', 'destination-atop', 'lighter', 'darker', 'copy', 'xor'];
 var blendIndex = 0;
 
-var text = new PointText({
-    position: [20, view.height-40],
-    fillColor: 'black',
-    justification: 'center',
-    fontSize: 20
-});
-
 for (var i = 0; i < numBoxes; i++) {
     var colour;
     if (Math.floor(Math.random()*2)) {
@@ -48,6 +41,13 @@ for (var i = 0; i < numBoxes; i++) {
         }
     }
 }
+
+var text = new PointText({
+    position: [50, view.viewSize-40],
+    fillColor: 'black',
+    justification: 'center',
+    fontSize: 20
+});
 
 function onFrame(event) {
      for (var i = 0; i < boxes.length; i++) {
