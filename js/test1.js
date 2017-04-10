@@ -85,7 +85,7 @@ function onKeyDown(event) {
         if(blendIndex < blendMode.length) {
             blendIndex++;
             for (var i = 0; i < boxes.length; i++) {
-                boxes[i].blendMode = blendMode[blendIndex];
+                boxes[i].blendMode = blendModes[blendIndex];
             }
         }
     }
@@ -94,11 +94,11 @@ function onKeyDown(event) {
         if(blendIndex > 0) {
             blendIndex--;
             for (var i = 0; i < boxes.length; i++) {
-                boxes[i].blendMode = blendMode[blendIndex];
+                boxes[i].blendMode = blendModes[blendIndex];
             }
         }
     }
     
-    text.content = "OPACITY: " + boxes[0].opacity + " BLENDMODE: " + blendMode[blendIndex];
+    text.content = "OPACITY: " + boxes[0].opacity + " BLENDMODE: " + blendModes[blendIndex];
 
 }
