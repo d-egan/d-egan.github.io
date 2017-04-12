@@ -29,6 +29,11 @@ ul {
     list-style: none outside none;
 }
 
+#selectedList {
+    margin-left: 8px;
+    font-size: 0.9em;
+}
+
 #projectContainer {
 
 	display: flex;
