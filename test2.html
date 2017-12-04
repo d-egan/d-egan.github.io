@@ -7,24 +7,27 @@
     <!-- <link rel ="icon" href=""> -->
 
     <title>TESTING</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- My css -->
     <link href="css/style.css" rel="stylesheet">
     <script type="text/javascript" src="js/paper-full.js"></script>
 
+    <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/build/GlslCanvas.js"></script>
     <script type="text/paperscript" src="js/test2.js" canvas="myCanvas">
     </script>
 
 
 </head>
 <body>
-    <canvas id="myCanvas" resize></canvas>
+    <canvas class="glslCanvas" data-fragment-url="https://raw.githubusercontent.com/d-egan/shader-experiments/master/glsles/2dAniWallPaper.frag" width="500" height="500" resize></canvas>
     <nav>
         <h1>Declan Egan</h1>
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li>TESTS
-                <ul>
+                <ul id="selectedList">
                     <li><a href="test1.html">TEST1</a></li>
                     <li><a href="test2.html">TEST2</a></li>
                 </ul>
