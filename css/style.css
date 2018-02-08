@@ -34,6 +34,16 @@ ul {
     font-size: 0.9em;
 }
 
+/* Flip only a specific browser? */
+#flipIt {
+	-moz-transform: scaleX(-1) scaleY(-1);
+	-webkit-transform: scaleX(-1) scaleY(-1);
+	-o-transform: scaleX(-1);
+    	transform: scaleX(-1);
+	-ms-filter: fliph; /*IE*/
+    	filter: fliph; /*IE*/
+}
+
 #projectContainer {
 
 	display: flex;
